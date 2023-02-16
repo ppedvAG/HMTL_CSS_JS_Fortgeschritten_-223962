@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="/scripts/forms.js" defer></script>
+    <title>Forms</title>
+</head>
+<body>
+    <form onSubmit="return false;">
+        <!-- Verhindert das neuladen des Dokuments beim Absenden -->
+        <label for="username">Username:
+            <input type="text" id="username">
+        </label>
+        <label for="email" required>E-Mail:
+            <input type="email" id="email">
+        </label>
+        <label for="password">Passwort:
+            <input type="password" id="password">
+        </label>
+        <label for="dropdown">Dropdown-Menü
+            <select id="dropdown">
+                <optgroup label="DC">
+                    <option value="batman">Batman</option>
+                    <option value="superman">Superman</option>
+                </optgroup>
+                <optgroup label="Marvel">
+                    <option value="ironman">Ironman</option>
+                    <option value="spiderman">Spiderman</option>
+                </optgroup>
+            </select>
+            <input type="submit" value="Absenden">
+        </label>
+    </form>
+
+
+
+
+
+    
+    <div>
+        <p id="output"></p>
+    </div>
+
+    <div id="wrapper">
+        <button id="a" value="a">A</button>
+        <button id="b" value="b">B</button>
+        <button id="c" value="c">C</button>
+        <button id="d" value="d">D</button>
+    </div>
+</body>
+</html>
