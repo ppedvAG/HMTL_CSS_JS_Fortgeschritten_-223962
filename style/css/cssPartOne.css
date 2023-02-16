@@ -1,0 +1,179 @@
+/*
+    Die verschiedenen Selektoren
+*/
+
+/*  Universal-Selektor würde generell jedes Tag beeinflussen, solange dieses keine andere CSS-Regel verfährt */
+
+* {
+    color: orange;
+}
+
+
+/* alle p-tags im html sollen ein styling bekommen */
+p {
+    color : blue;
+}
+
+/* Überschriften mit <h1> bis <h6> -> h1 ist größte und wichtigste Überschrift ( h1 soll nur einmal auf der Webseite vorkommen ) */
+
+h2 {
+    color : maroon;
+    text-align: center;
+}
+
+#first-article {
+    color: yellow;
+    font-size: 24px;
+}
+
+/*  Spezifität wird mehr gewichtet als die Kaskadierung */
+h2#first-article {
+    color: midnightblue; /* Färbt h2 ein, da es die selbe spezifität hat, aber weiter unten definiert wurde */
+}
+
+
+/* und Kombinator */
+/* Selektiert ale aufgezählten Elemente */
+li, p {
+    color: rgba(13, 12, 12, 0.779)
+}
+
+
+
+/* Nachfahr/Descendant-Selektor */
+
+nav li {
+    list-style-type: square;
+}
+
+
+/* Direkter-Nachfahr/Child-Selektor */
+
+li>a {
+    text-decoration:none;
+    color: midnightblue;
+}
+
+/* Direct Sibling Selector */
+/* Selektiere nur p - Elemente, die direkt nach dem h2 kommen und auf der selbenen Ebene stehen  */
+
+h2 + p {
+    color: red;
+}
+
+/*Gerneal Sibling Selector*/
+/*Selektiert alle Elemente die auf der selben Stufe stehen wie das erstgenannte Element */
+h2 ~ p {
+    color: orange;
+}
+
+/* Attribute Selektor: */
+
+a[href="#"] {
+    color: tomato;
+}
+
+/* Können genau angeben wie das Attribut heißen soll */
+/* Können die werte recht flexibel abfangen */
+
+/* 
+    element[attributsName="Wert"] => Attribut mit genauem Wert
+    element[attributsName^="Wert"] => Attributswert muss mit Wert beginnen
+    element[attributsName$="Wert"] => Attributswert muss mit  Wert enden
+    element[attributsName*="Wert"] => Attributswert muss Wert enthalten
+    element:not([attributsname="Wert"]) => Elementsattribut darf den Wert nicht enthalten
+*/
+
+/* *[class*="container"] {
+    display: block;
+    height: 150px;
+    background-color: brown;
+} */
+
+
+
+/*Pseudo-Elemente*/
+
+ /*Werden an einem anderen Selektor angehängt */
+ /*Beginnen mit ::PseudoElementName */
+
+
+ /*
+    ::after - Fügt etwas als letztes Child eines Elementes an 
+    ::before - Fügt etwas als erstes Child eines Elementes an
+ */
+
+ li>a::before {
+    content: "Ich bin before ";
+ }
+
+ li>a::after {
+    content: "Ich bin after";
+ }
+
+ h2#first-article::first-letter {
+    font-size: 48px;
+ }
+
+ h2+p::first-line {
+    background-color: aquamarine;
+ }
+
+ /* ::placeholder - Stylt den Platzhalter eines Elementes */
+
+#input1::placeholder {
+    color: teal;
+}
+
+/* Bestimmt wie die Aufzählungszeichen bei li-Elementen aussehen */
+
+article li::marker {
+    content: "+";
+}
+
+
+
+/* Pseudoklassen */
+
+/*:root - Root - Element innerhalb unseres Dokuments */
+/* Ist spezifischer als html */
+
+:root {
+    font-size: large;
+}
+
+
+/* :hover - Wird angewandt wenn man mit der Maus über ein Element fährt */
+*:hover {
+    color:pink;
+}
+
+
+/* :not() */
+/* Erfasst Elemente die nicht ausgeschlossen wurden innerhalb der Klammer */
+
+/* n-th-Child */
+/* 
+    :first-child => Erfässt das erste Kindselement
+    :last-child => Erfässt das letzte Kindselement
+    :only-child => Erfässt das einzige Element
+    :nth-child(n+m) => Erfässt das n-te Kind eines Elements und beginnt bei m zu zählen
+    :nth-last-child(n+m) => Erfässt das n-te Kind eines Elements und beginnt bei m zu zählen in umgekehrter Reihenfolge
+    Statt n+m kann auch even oder odd enthalten sein
+
+*/
+
+
+li:first-child {
+    color:chartreuse;
+}
+
+li:last-child {
+    color: chartreuse;
+}
+
+li:first-child:hover {
+    color:blue;
+}
+
+

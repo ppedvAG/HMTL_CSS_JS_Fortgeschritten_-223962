@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--Beispiel1: Alle Media-Regeln in einer breakpont.css -->
+    <!--<link rel="stylesheet" href="/style/css/breakpoints.css" >-->
+
+    <!-- Beispiel2: Media-Regeln werden in einzelene CSS-Dateien aufgeteilt-->
+    <!-- Das HTML-Document, bekommt die Aufgabe, je nach Bildschirmgröße die richtige CSS-Datei zu selektieren und zu verwenden -->
+    <link rel="stylesheet" href="style/css/small.css" media="screen and (max-width: 450px)">
+    <link rel="stylesheet" href="style/css/big.css" media="screen and (min-width: 451px)">
+
+    <link rel="stylesheet" href="style/css/print.css" media="print">
+
+    <title>Breakpoint & Media-Queries</title>
+</head>
+<body>
+    <div id="first">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Dolor quos repudiandae error perspiciatis ad necessitatibus eveniet 
+        excepturi blanditiis, voluptatibus dolore sit inventore hic? 
+        Voluptates architecto corporis maiores quod! Asperiores vero magnam suscipit. 
+        Eaque sequi sint eligendi quis doloribus, sit voluptate, 
+        ea nam veniam deserunt expedita dolor est mollitia iste dolore.
+    </div>
+    <div id="second">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Dolor quos repudiandae error perspiciatis ad necessitatibus eveniet 
+        excepturi blanditiis, voluptatibus dolore sit inventore hic? 
+        Voluptates architecto corporis maiores quod! Asperiores vero magnam suscipit. 
+        Eaque sequi sint eligendi quis doloribus, sit voluptate, 
+        ea nam veniam deserunt expedita dolor est mollitia iste dolore.
+    </div>
+    <div id="third">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
+        Dolor quos repudiandae error perspiciatis ad necessitatibus eveniet 
+        excepturi blanditiis, voluptatibus dolore sit inventore hic? 
+        Voluptates architecto corporis maiores quod! Asperiores vero magnam suscipit. 
+        Eaque sequi sint eligendi quis doloribus, sit voluptate, 
+        ea nam veniam deserunt expedita dolor est mollitia iste dolore.
+    </div>
+    <img src="https://via.placeholder.com/250x250" alt="Ach was ein schöne Bild" >
+</body>
+</html>
