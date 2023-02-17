@@ -126,6 +126,9 @@ y = 15;
 w = 15;
 console.log(w);
 var w;
+
+
+
 // Wenn wir ganz ohne Keyword einer Variable einen Wert zuweisen wird sie als globale Eigenschaft des window-Objekts erstellt
 // SCHLECHTE FORM!
 // Geht nicht
