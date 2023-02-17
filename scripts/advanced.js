@@ -64,12 +64,23 @@ class Student extends Person {
         return Math.floor(Math.random() * 6) +1;
     }
 
-    /*introduceSelf() {
+    introduceSelf() {
         console.log(`My name ist ${this.firstName} and I'm in class ${this.schoolClaas}`);
-    }*/
+    }
+
+        // Keine überladung
+    // introduceSelf(test) {
+    //     console.log(`My name is ${this.firstName} and I'm in class ${this.schoolClass} ${test}`);
+    // }
+    // Trick zur Überladung: https://www.geeksforgeeks.org/function-overloading-in-javascript/
 }
 
 
 const p2 = new Student("Erika", "Musterfrau", 21, "female", 15);
-p2.introduceSelf(); 
+p2.introduceSelf();
+
+// Erstellt eine Klasse Teacher, die von Person abgeleitet wird und zusätzlich ein private field mit subject hat
+// Die Methode introduceSelf() soll erweiter oder überschrieben werden um zusätzlich das subject anzuzeigen
+// Zusätzlich einen getter und setter für subject erstellen
+
 
